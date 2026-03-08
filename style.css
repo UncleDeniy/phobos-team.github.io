@@ -1609,3 +1609,57 @@ footer {
     }
 
 }
+/* Исправление для карточек принципов */
+.principle-card h3 {
+    font-size: 1rem; /* Уменьшаем с 1.2rem */
+    margin-bottom: 10px;
+    color: #fff;
+    word-wrap: break-word; /* Разрешаем перенос */
+    white-space: normal; /* Разрешаем перенос строк */
+    line-height: 1.2;
+    padding: 0 5px; /* Небольшой отступ по бокам */
+}
+
+.principle-card {
+    text-align: center;
+    padding: 25px 15px; /* Увеличиваем боковые отступы */
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+    min-height: 220px; /* Фиксированная высота */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.principle-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.principle-card p {
+    font-size: 0.75rem; /* Чуть меньше текст описания */
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+/* Для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .principle-card h3 {
+        font-size: 0.9rem; /* Ещё меньше на мобильных */
+    }
+    
+    .principle-card {
+        padding: 20px 10px;
+        min-height: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .principle-card h3 {
+        font-size: 0.85rem;
+        word-break: break-word; /* Переносим длинные слова */
+    }
+}
