@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // === МОБИЛЬНОЕ МЕНЮ ===
+
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
 
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // === АККОРДЕОН ===
+
     document.querySelectorAll('.accordion-header').forEach(header => {
         header.addEventListener('click', () => {
             const content = header.nextElementSibling;
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // === ПЛАВНЫЙ СКРОЛЛ ===
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -38,15 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-            // Закрыть мобильное меню
+      
             if (nav && nav.classList.contains('nav-active')) {
                 nav.classList.remove('nav-active');
                 document.querySelectorAll('.nav-links li').forEach(link => link.style.animation = '');
             }
         });
     });
-
-    // === АНИМАЦИЯ ПРИ СКРОЛЛЕ ===
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -61,12 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Добавляем стили анимации
+
     const style = document.createElement('style');
     style.textContent = '.animate-in{opacity:1!important; transform:translateY(0)!important}';
     document.head.appendChild(style);
 
-    // === ПОДСВЕТКА НАВИГАЦИИ ===
     const sections = document.querySelectorAll('section[id]');
     window.addEventListener('scroll', () => {
         const scrollY = window.pageYOffset;
@@ -81,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // === ПАРАЛЛАКС ===
     const hero = document.querySelector('.hero');
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
@@ -90,14 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // === ГАЛЕРЕЯ (только если есть элементы) ===
     const lightbox = document.getElementById('lightbox');
     if (lightbox) {
         initLightbox();
     }
 });
 
-// === ФУНКЦИЯ ГАЛЕРЕИ ===
 function initLightbox() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightboxImage');
@@ -164,7 +158,6 @@ function initLightbox() {
         updateLightbox();
     }
 
-    // Event listeners
     lightbox.querySelector('.lightbox-close') ?.addEventListener('click', closeLightbox);
     lightbox.querySelector('.lightbox-prev') ?.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -184,7 +177,6 @@ function initLightbox() {
         else if (e.key === 'ArrowRight') showNext();
     });
 
-    // Свайпы для мобильных
     let touchStartX = 0;
     lightbox.addEventListener('touchstart', (e) => touchStartX = e.changedTouches[0].screenX);
     lightbox.addEventListener('touchend', (e) => {
@@ -194,4 +186,5 @@ function initLightbox() {
     });
 
     lightboxImage.style.transition = 'opacity 0.2s';
+
 }
