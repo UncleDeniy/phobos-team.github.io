@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="img/gerb.png">
+    <link rel="preload" href="img/gerb.png" as="image">
 </head>
 
 <body>
+
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
@@ -80,6 +82,13 @@
             </h2>
 
             <div class="about-grid">
+                <div class="team-status">
+                    <span class="status-dot"></span>
+                    <span>СТАТУС: АКТИВНА</span>
+                </div>
+                <div class="team-coords">
+                    43.1155° N · 131.8855° E
+                </div>
                 <div class="about-text">
                     <div class="text-block">
                         <p class="lead-text">МЫ — НЕЗАВИСИМАЯ СТРАЙКБОЛЬНАЯ КОМАНДА <span class="highlight">«ФОБОС»</span> ИЗ ВЛАДИВОСТОКА.</p>
@@ -138,188 +147,415 @@
         </div>
     </section>
 
-    <section id="structure" class="section dark-bg">
+    <section id="structure" class="section dark-bg structure-section">
         <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-sitemap"></i> ИЕРАРХИЯ
-            </h2>
+            <div class="section-header-block">
+                <h2 class="section-title">
+                    <i class="fas fa-sitemap"></i> ИЕРАРХИЯ
+                </h2>
+                <p class="section-subtitle">
+                    Организационная структура СК «Фобос», основанная на принципах субординации, дисциплины и последовательной передачи распоряжений.
+                </p>
+            </div>
 
-            <div class="org-chart">
-                <div class="rank-level level-1">
-                    <div class="rank-card commander">
-                        <div class="rank-badge">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h3>КОМАНДИР</h3>
-                        <div class="rank-name">АНДРЕЙ "ТАРДИ"</div>
-                        <div class="rank-desc">ПОЛНОЕ РУКОВОДСТВО, СТРАТЕГИЯ, ПРЕДСТАВИТЕЛЬСТВО</div>
-                        <div class="rank-decoration"></div>
-                    </div>
+            <div class="command-overview">
+                <div class="overview-card">
+                    <span class="overview-label">ОСНОВА</span>
+                    <strong>СУБОРДИНАЦИЯ И ЦЕПОЧКА КОМАНДОВАНИЯ</strong>
                 </div>
-
-                <div class="connector-line"></div>
-
-                <div class="rank-level level-2">
-                    <div class="rank-card deputy">
-                        <div class="rank-badge">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h3>ЗАМ. КОМАНДИРА</h3>
-                        <div class="rank-name">ЕВГЕНИЙ "РАМА"</div>
-                        <div class="rank-desc">ОПЕРАТИВНОЕ УПРАВЛЕНИЕ</div>
-                    </div>
-                    <div class="rank-card deputy">
-                        <div class="rank-badge">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h3>НАЧАЛЬНИК ШТАБА</h3>
-                        <div class="rank-name">НИКИТА "ЛАТЫШ"</div>
-                        <div class="rank-desc">ПЛАНИРОВАНИЕ И КООРДИНАЦИЯ</div>
-                    </div>
+                <div class="overview-card">
+                    <span class="overview-label">ПРИНЦИП</span>
+                    <strong>ЕДИНСТВО УПРАВЛЕНИЯ И ОТСУТСТВИЕ ПРОТИВОРЕЧИВЫХ УКАЗАНИЙ</strong>
                 </div>
-
-                <div class="connector-line"></div>
-
-                <div class="rank-level level-3">
-                    <div class="rank-card soldier">
-                        <div class="rank-badge">
-                            <i class="fas fa-crosshairs"></i>
-                        </div>
-                        <h3>СТРЕЛКИ</h3>
-                        <div class="rank-name">ОСНОВНОЙ СОСТАВ</div>
-                        <div class="rank-desc">ВЫПОЛНЕНИЕ БОЕВЫХ ЗАДАЧ</div>
-                    </div>
-                    <div class="rank-card recruit">
-                        <div class="rank-badge">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <h3>РЕКРУТЫ</h3>
-                        <div class="rank-name">КАНДИДАТЫ</div>
-                        <div class="rank-desc">ИСПЫТАТЕЛЬНЫЙ СРОК</div>
-                    </div>
+                <div class="overview-card">
+                    <span class="overview-label">ФОРМАТ</span>
+                    <strong>КОМАНДИР → ЗАМЕСТИТЕЛИ → ПОДРАЗДЕЛЕНИЯ → ЛИЧНЫЙ СОСТАВ</strong>
                 </div>
             </div>
+
+            <div class="chain-of-command">
+                <div class="chain-line chain-line-vertical top"></div>
+
+                <div class="rank-level level-1">
+                    <article class="rank-card commander tactical-card">
+                        <div class="rank-card-topline"></div>
+
+                        <div class="rank-badge">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <span class="rank-type">КОМАНДОВАНИЕ</span>
+
+                        <h3>КОМАНДИР СК «ФОБОС»</h3>
+
+                        <div class="rank-name">
+                            Музыченко Андрей — позывной «Тарди»
+                        </div>
+
+                        <p class="rank-desc">
+                            Высшее руководство команды. Командир определяет стратегию развития, утверждает структуру подразделений, регламент снаряжения и представляет команду на официальных мероприятиях и играх.
+                        </p>
+
+                        <ul class="rank-duties">
+                            <li><i class="fas fa-check-circle"></i> Общее руководство командой</li>
+                            <li><i class="fas fa-check-circle"></i> Определение структуры и развития</li>
+                            <li><i class="fas fa-check-circle"></i> Представительство команды</li>
+                        </ul>
+
+                        <div class="rank-footer">
+                            <span>УРОВЕНЬ 01</span>
+                            <span>CMD</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="chain-line chain-line-vertical middle"></div>
+
+                <div class="rank-level level-2">
+
+                    <article class="rank-card deputy tactical-card">
+                        <div class="rank-card-topline"></div>
+
+                        <div class="rank-badge">
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <span class="rank-type">ЗАМЕСТИТЕЛЬ КОМАНДИРА</span>
+
+                        <h3>ЗАМЕСТИТЕЛЬ КОМАНДИРА</h3>
+
+                        <div class="rank-name">
+                            Широкий Евгений — позывной «Рама»
+                        </div>
+
+                        <p class="rank-desc">
+                            Заместитель командира обеспечивает оперативное управление командой, координирует деятельность подразделений и исполняет обязанности командира при его отсутствии.
+                        </p>
+
+                        <ul class="rank-duties">
+                            <li><i class="fas fa-check-circle"></i> Оперативное управление</li>
+                            <li><i class="fas fa-check-circle"></i> Координация подразделений</li>
+                            <li><i class="fas fa-check-circle"></i> Контроль исполнения решений</li>
+                        </ul>
+
+                        <div class="rank-footer">
+                            <span>УРОВЕНЬ 02</span>
+                            <span>XO</span>
+                        </div>
+                    </article>
+
+                    <article class="rank-card deputy tactical-card">
+                        <div class="rank-card-topline"></div>
+
+                        <div class="rank-badge">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+
+                        <span class="rank-type">КОМАНДОВАНИЕ ПОДРАЗДЕЛЕНИЙ</span>
+
+                        <h3>КОМАНДИР ПОДРАЗДЕЛЕНИЙ</h3>
+
+                        <div class="rank-name">
+                            Иванов Никита — позывной «Латыш»
+                        </div>
+
+                        <p class="rank-desc">
+                            Руководит подразделениями команды, доводит приказы командования, организует подготовку личного состава и отвечает за боеспособность своего подразделения.
+                        </p>
+
+                        <ul class="rank-duties">
+                            <li><i class="fas fa-check-circle"></i> Руководство подразделениями</li>
+                            <li><i class="fas fa-check-circle"></i> Доведение приказов</li>
+                            <li><i class="fas fa-check-circle"></i> Контроль подготовки состава</li>
+                        </ul>
+
+                        <div class="rank-footer">
+                            <span>УРОВЕНЬ 02</span>
+                            <span>UNIT</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="chain-line chain-line-vertical bottom"></div>
+
+            <div class="rank-level level-3">
+                <article class="rank-card soldier tactical-card">
+                    <div class="rank-card-topline"></div>
+                    <div class="rank-badge">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <span class="rank-type">ОСНОВНОЙ СОСТАВ</span>
+                    <h3>СТРЕЛКИ И СПЕЦИАЛИСТЫ</h3>
+                    <div class="rank-name">ЛИЧНЫЙ СОСТАВ ПОДРАЗДЕЛЕНИЙ</div>
+                    <p class="rank-desc">
+                        Основной состав команды: стрелки и специалисты, включая снайперов, пулемётчиков, гранатомётчиков и штурмовиков. Выполняют задачи, участвуют в тренировках и мероприятиях команды.
+                    </p>
+                    <ul class="rank-duties">
+                        <li><i class="fas fa-check-circle"></i> Выполнение поставленных задач</li>
+                        <li><i class="fas fa-check-circle"></i> Соблюдение правил и субординации</li>
+                        <li><i class="fas fa-check-circle"></i> Участие в тренировках и играх</li>
+                    </ul>
+                    <div class="rank-footer">
+                        <span>УРОВЕНЬ 03</span>
+                        <span>LINE</span>
+                    </div>
+                </article>
+
+                <article class="rank-card recruit tactical-card">
+                    <div class="rank-card-topline"></div>
+                    <div class="rank-badge">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <span class="rank-type">КАНДИДАТЫ</span>
+                    <h3>РЕКРУТЫ</h3>
+                    <div class="rank-name">ИСПЫТАТЕЛЬНЫЙ И ТРЕНИРОВОЧНЫЙ ЭТАП</div>
+                    <p class="rank-desc">
+                        Рекруты закрепляются за подразделением, проходят испытательный срок, осваивают устав, правила страйкбола и поэтапно собирают установленный комплект одежды и снаряжения.
+                    </p>
+                    <ul class="rank-duties">
+                        <li><i class="fas fa-check-circle"></i> Испытательный срок</li>
+                        <li><i class="fas fa-check-circle"></i> Изучение устава и правил</li>
+                        <li><i class="fas fa-check-circle"></i> Сбор минимального комплекта</li>
+                    </ul>
+                    <div class="rank-footer">
+                        <span>УРОВЕНЬ 04</span>
+                        <span>REC</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="structure-note-block">
+            <div class="structure-note">
+                <i class="fas fa-broadcast-tower"></i>
+                <div>
+                    <strong>ПРИНЦИП ПЕРЕДАЧИ РАСПОРЯЖЕНИЙ</strong>
+                    <p>
+                        Во избежание противоречивых указаний распоряжения передаются по цепочке: от командира СК «Фобос» к командирам подразделений (или заместителям), далее — непосредственным подчинённым.
+                    </p>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
 
-    <section id="uniform" class="section">
+    <section id="uniform" class="section uniform-section">
         <div class="container">
-            <h2 class="section-title">
-                <i class="fas fa-vest"></i> СТАНДАРТЫ СНАРЯЖЕНИЯ
-            </h2>
+            <div class="section-header-block">
+                <h2 class="section-title">
+                    <i class="fas fa-vest"></i> СТАНДАРТЫ СНАРЯЖЕНИЯ
+                </h2>
+                <p class="section-subtitle">
+                    Требования к форме, экипировке и вооружению СК «Фобос» на основе устава и командного кит-листа.
+                </p>
+            </div>
 
-            <div class="uniform-grid">
-                <div class="uniform-card">
-                    <div class="card-header">
-                        <i class="fas fa-tshirt"></i>
-                        <h3>ОДЕЖДА</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul class="spec-list">
-                            <li>
-                                <span class="spec-label">ЦВЕТ:</span>
-                                <span class="spec-value">A-TACS FG / OLIVE</span>
-                            </li>
-                            <li>
-                                <span class="spec-label">МОДЕЛЬ:</span>
-                                <span class="spec-value">CRYE PRECISION GEN 3</span>
-                            </li>
-                            <li>
-                                <span class="spec-label">ОБУВЬ:</span>
-                                <span class="spec-value">TACTICAL BOOTS</span>
-                            </li>
-                            <li>
-                                <span class="spec-label">ГОЛОВНОЙ УБОР:</span>
-                                <span class="spec-value">КЕПКА / ШАПКА OLIVE</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <div class="color-sample atacs"></div>
-                        <div class="color-sample olive"></div>
-                    </div>
+            <div class="uniform-intel-bar">
+                <div class="intel-item">
+                    <span class="intel-label">ПРИНЦИП</span>
+                    <strong>ЕДИНООБРАЗИЕ · РЕАЛЬНЫЕ ПРОТОТИПЫ · ПРАКТИЧНОСТЬ</strong>
                 </div>
-
-                <div class="uniform-card featured">
-                    <div class="card-header">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>ЗАЩИТА</h3>
-                        <span class="featured-badge">ВАЖНО</span>
-                    </div>
-                    <div class="card-body">
-                        <ul class="spec-list">
-                            <li>
-                                <span class="spec-label">ОЧКИ:</span>
-                                <span class="spec-value">ПОЛИКАРБОНАТ 3+ ДЖ</span>
-                            </li>
-                            <li>
-                                <span class="spec-label">ШЛЕМ:</span>
-                                <span class="spec-value">FAST / EXFIL / ATE</span>
-                            </li>
-                            <li>
-                                <span class="spec-label">ПЛИТНИК:</span>
-                                <span class="spec-value">LBT 6094 / JPC / CPC</span>
-                            </li>
-                            <li>
-                                <span class="spec-label">ПЕРЧАТКИ:</span>
-                                <span class="spec-value">OAKLEY / MECHANIX</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <span>ОЧКИ ОБЯЗАТЕЛЬНЫ С МОМЕНТА ПРИБЫТИЯ</span>
-                    </div>
+                <div class="intel-item">
+                    <span class="intel-label">ПРИОРИТЕТ</span>
+                    <strong>БЕЗОПАСНОСТЬ ГЛАЗ И ЛИЦА, СВЯЗЬ, УДОБСТВО В ИГРЕ</strong>
                 </div>
+                <div class="intel-item">
+                    <span class="intel-label">СРОК</span>
+                    <strong>ПОЛНЫЙ КОМПЛЕКТ — ДО 5 МЕСЯЦЕВ С МОМЕНТА ПРИНЯТИЯ</strong>
+                </div>
+            </div>
 
-                <div class="uniform-card">
-                    <div class="card-header">
-                        <i class="fas fa-gun"></i>
-                        <h3>ВООРУЖЕНИЕ</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul class="spec-list">
-                            <li>
-                                <span class="spec-label">ПРИВОД:</span>
-                                <span class="spec-value">АК / AR / HK</span>
-                            </li>
-                            <li>
-                                <span class="spec-label">ЭНЕРГИЯ:</span>
-                                <span class="spec-value">ДО 1.44 ДЖ</span>
-                            </li>
-                            <li>
-                                <span class="spec-label">МАГАЗИНЫ:</span>
-                                <span class="spec-value">МЕХАНИЧЕСКИЕ</span>
-                            </li>
-                            <li>
-                                <span class="spec-label">СВЯЗЬ:</span>
-                                <span class="spec-value">LPD / ГАРНИТУРА</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <div class="tech-spec">
-                            <span>6MM BB</span>
-                            <span>1.44J</span>
+            <div class="uniform-grid upgraded-uniform-grid">
+                <article class="uniform-card uniform-panel">
+                    <div class="uniform-panel-header">
+                        <div class="uniform-panel-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div>
+                            <h3>ФОРМА И ВНЕШНИЙ ВИД</h3>
+                            <span class="uniform-panel-subtitle">БАЗОВЫЙ ВИЗУАЛЬНЫЙ СТАНДАРТ</span>
                         </div>
                     </div>
+
+                    <ul class="uniform-specs">
+                        <li>
+                            <span class="spec-label">БОЕВАЯ ФОРМА</span>
+                            <span class="spec-value">GEN 2 / GEN 3 В A-TACS FG</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">БОЕВАЯ РУБАХА</span>
+                            <span class="spec-value">ТИП / АНАЛОГ CRYE PRECISION</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">БРЮКИ</span>
+                            <span class="spec-value">С ВОЗМОЖНОСТЬЮ УСТАНОВКИ НАКОЛЕННИКОВ</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">КУРТКА</span>
+                            <span class="spec-value">ОЛИВА / OD, SOFTSHELL / ФЛИС / ВВЗ</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">ГОЛОВНОЙ УБОР</span>
+                            <span class="spec-value">КЕПКА A-TACS FG / ШАПКА ОЛИВА</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">ОБУВЬ</span>
+                            <span class="spec-value">ТАКТИЧЕСКИЕ БОТИНКИ ТИПА LOWA</span>
+                        </li>
+                    </ul>
+
+                    <div class="uniform-note">
+                        <i class="fas fa-circle"></i>
+                        <span>
+                        Основа внешнего вида команды — A-Tacs FG для формы и Olive / OD для части экипировки
+                        и верхней одежды.
+                    </span>
+                    </div>
+
+                    <div class="uniform-color-row">
+                        <div class="color-chip atacs"><span>A-TACS FG</span></div>
+                        <div class="color-chip olive"><span>OLIVE / OD</span></div>
+                    </div>
+                </article>
+
+                <article class="uniform-card uniform-panel featured">
+                    <div class="uniform-panel-header">
+                        <div class="uniform-panel-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h3>МИНИМАЛЬНЫЙ ОБЯЗАТЕЛЬНЫЙ КОМПЛЕКТ</h3>
+                            <span class="uniform-panel-subtitle">ОБЯЗАТЕЛЬНО ДЛЯ УЧАСТИЯ</span>
+                        </div>
+                        <span class="uniform-critical-badge">ОБЯЗАТЕЛЬНО</span>
+                    </div>
+
+                    <ul class="uniform-specs">
+                        <li>
+                            <span class="spec-label">ОЧКИ</span>
+                            <span class="spec-value">ПОЛИКАРБОНАТ, НЕ МЕНЕЕ 3 ДЖ</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">ПРИВОД</span>
+                            <span class="spec-value">ЭЛЕКТРОПНЕВМАТИЧЕСКИЙ, ДО 1.44 ДЖ</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">МАГАЗИНЫ</span>
+                            <span class="spec-value">МЕХАНИЧЕСКИЕ, НЕ МЕНЕЕ 3 ШТ.</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">ПЛИТОНОСЕЦ</span>
+                            <span class="spec-value">LBT 6094 / AVS / JPC / CPC, ОЛИВА</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">КРАСНАЯ ПОВЯЗКА</span>
+                            <span class="spec-value">НЕ МЕНЕЕ 50 × 50 СМ</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">СВЯЗЬ</span>
+                            <span class="spec-value">LPD, 69 КАНАЛОВ, ОТ 5 ВТ + ГАРНИТУРА</span>
+                        </li>
+                    </ul>
+
+                    <div class="uniform-warning-box">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <strong>ОЧКИ СТРОГО ОБЯЗАТЕЛЬНЫ</strong>
+                            <p>
+                                Защитные очки должны носиться с момента прибытия на место проведения мероприятия и до его полного завершения.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="uniform-card uniform-panel">
+                    <div class="uniform-panel-header">
+                        <div class="uniform-panel-icon">
+                            <i class="fas fa-toolbox"></i>
+                        </div>
+                        <div>
+                            <h3>ПОЛНЫЙ КОМПЛЕКТ</h3>
+                            <span class="uniform-panel-subtitle">РАСШИРЕННОЕ ОСНАЩЕНИЕ</span>
+                        </div>
+                    </div>
+
+                    <ul class="uniform-specs">
+                        <li>
+                            <span class="spec-label">НОЧНЫЕ ИГРЫ</span>
+                            <span class="spec-value">КРАСНЫЙ МАЯЧОК + ТРАССЕР / ИМИТАЦИЯ ПЛАМЕНИ</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">СВЕТ</span>
+                            <span class="spec-value">ТАКТИЧЕСКИЙ ФОНАРЬ</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">ГРАНАТЫ</span>
+                            <span class="spec-value">ДО 2 СТРАЙКБОЛЬНЫХ ИМИТАЦИЙ</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">ШЛЕМ</span>
+                            <span class="spec-value">FAST / EXFIL / ATE / AIRFRAME + КАВЕР</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">ВАРБЕЛТ</span>
+                            <span class="spec-value">С ЛЯМКАМИ И ПОДСУМКАМИ, ОЛИВА</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">РЮКЗАК</span>
+                            <span class="spec-value">ДЛЯ АКТИВНОГО ИСПОЛЬЗОВАНИЯ В ИГРЕ, ОЛИВА</span>
+                        </li>
+                    </ul>
+
+                    <div class="weapon-tech-bar">
+                        <span>FAST / EXFIL</span>
+                        <span>OD / OLIVE</span>
+                        <span>FIELD READY</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="uniform-checklist-block">
+                <div class="uniform-checklist-card">
+                    <h3><i class="fas fa-clipboard-check"></i> ДОПУСКАЕТСЯ</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Приводы на базе АК / AR / G36 / HK416 / HK417</li>
+                        <li><i class="fas fa-check-circle"></i> Плитоносцы и подсумки в оливе</li>
+                        <li><i class="fas fa-check-circle"></i> Безухие шлемы с кавером A-Tacs FG</li>
+                        <li><i class="fas fa-check-circle"></i> Балаклавы, баффы, шемаги в оливе</li>
+                    </ul>
+                </div>
+
+                <div class="uniform-checklist-card">
+                    <h3><i class="fas fa-ban"></i> НЕ ДОПУСКАЕТСЯ</h3>
+                    <ul>
+                        <li><i class="fas fa-times-circle"></i> Сетчатые очки и внешние защитные маски</li>
+                        <li><i class="fas fa-times-circle"></i> Громкая гарнитура без звукомаскировки</li>
+                        <li><i class="fas fa-times-circle"></i> Яркие и выбивающиеся элементы снаряжения</li>
+                        <li><i class="fas fa-times-circle"></i> Несогласованные покупки в период рекрута</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="alert-box">
+            <div class="alert-box upgraded-alert-box">
                 <i class="fas fa-exclamation-triangle"></i>
                 <div class="alert-content">
-                    <strong>ТРЕБОВАНИЕ УСТАВА:</strong>
-                    <span>ПОЛНЫЙ КОМПЛЕКТ СНАРЯЖЕНИЯ ДОЛЖЕН БЫТЬ СОБРАН В ТЕЧЕНИЕ 5 МЕСЯЦЕВ С МОМЕНТА ПРИНЯТИЯ В КОМАНДУ</span>
+                    <strong>ВАЖНОЕ ТРЕБОВАНИЕ</strong>
+                    <span>
+                    Минимальный комплект должен быть приобретён не позднее полутора месяцев,
+                    полный комплект — не позднее 5 месяцев с момента принятия в команду.
+                </span>
                 </div>
             </div>
-        </div>
-        <div class="charter-download">
-            <a href="files/Spisok_ispolzuemogo_snaryazhenia.pdf" class="btn-download">
-                <i class="fas fa-download"></i>
-                <span>СКАЧАТЬ ПОЛНЫЙ СПИСОК ИСПОЛЬЗУЕМОГО СНАРЯЖЕНИЯ (PDF)</span>
-            </a>
+
+            <div class="charter-download">
+                <a href="files/Spisok_ispolzuemogo_snaryazhenia.pdf" class="btn-download">
+                    <i class="fas fa-download"></i>
+                    <span>СКАЧАТЬ ПОЛНЫЙ КИТ-ЛИСТ СНАРЯЖЕНИЯ (PDF)</span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -421,95 +657,138 @@
 
     <section id="gallery" class="section gallery-section">
         <div class="container">
-            <h2 id="gallery-heading" class="section-title">
-                <i class="fas fa-images"></i> ГАЛЕРЕЯ
-            </h2>
+            <div class="gallery-section-header">
+                <h2 id="gallery-heading" class="section-title">
+                    <i class="fas fa-images"></i> ГАЛЕРЕЯ
+                </h2>
+                <p class="gallery-section-text">Архив выездов, командных построений и игровых эпизодов. Нажми на карточку, чтобы открыть снимок в полном размере.</p>
+            </div>
 
-            <div class="gallery-grid">
-                <figure class="gallery-item" data-index="0">
+            <div class="gallery-toolbar" aria-label="Фильтр галереи">
+                <button class="gallery-filter active" type="button" data-filter="all">ВСЕ</button>
+                <button class="gallery-filter" type="button" data-filter="2024">2024</button>
+                <button class="gallery-filter" type="button" data-filter="2020">2020</button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <figure class="gallery-item" data-index="0" data-year="2024" tabindex="0" aria-label="Открыть фото: Закрытие сезона 2024">
                     <div class="gallery-image-wrapper">
                         <img src="img/gallery/1.jpg" alt="Команда на полигоне" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-icon">
                                 <i class="fas fa-search-plus"></i>
                             </div>
+                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
                         </div>
+                        <span class="gallery-badge">2024</span>
                     </div>
                     <figcaption class="gallery-caption">
-                        <h4>закрытие 2024</h4>
-                        <p>Пример подписи фото будет выглядеть так.</p>
+                        <div class="gallery-caption-top">
+                            <h4>ЗАКРЫТИЕ СЕЗОНА</h4>
+                            <span class="gallery-meta">ОКТЯБРЬ 2024</span>
+                        </div>
+                        <p>Общий сбор команды после финальной игры сезона.</p>
                     </figcaption>
                 </figure>
 
-                <figure class="gallery-item" data-index="1">
+                <figure class="gallery-item" data-index="1" data-year="2024" tabindex="0" aria-label="Открыть фото: Командный состав 2024">
                     <div class="gallery-image-wrapper">
                         <img src="img/gallery/2.jpg" alt="Командный состав" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-icon">
                                 <i class="fas fa-search-plus"></i>
                             </div>
+                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
                         </div>
+                        <span class="gallery-badge">2024</span>
                     </div>
                     <figcaption class="gallery-caption">
-                        <h4>закрытие 2024</h4>
-                        <p> </p>
+                        <div class="gallery-caption-top">
+                            <h4>КОМАНДНЫЙ СОСТАВ</h4>
+                            <span class="gallery-meta">СЕЗОН 2024</span>
+                        </div>
+                        <p>Построение и командное фото перед выходом на игру.</p>
                     </figcaption>
                 </figure>
 
-                <figure class="gallery-item" data-index="2">
+                <figure class="gallery-item" data-index="2" data-year="2020" tabindex="0" aria-label="Открыть фото: Закрытие 2020">
                     <div class="gallery-image-wrapper">
                         <img src="img/gallery/20201.jpg" alt="Снайперская позиция" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-icon">
                                 <i class="fas fa-search-plus"></i>
                             </div>
+                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
                         </div>
+                        <span class="gallery-badge">2020</span>
                     </div>
                     <figcaption class="gallery-caption">
-                        <h4>закрытие 2020</h4>
-                        <p> </p>
+                        <div class="gallery-caption-top">
+                            <h4>ЗАКРЫТИЕ 2020</h4>
+                            <span class="gallery-meta">АРХИВ</span>
+                        </div>
+                        <p>Один из ранних выездов команды и архивный кадр сезона.</p>
                     </figcaption>
                 </figure>
 
-                <figure class="gallery-item" data-index="3">
+                <figure class="gallery-item" data-index="3" data-year="2020" tabindex="0" aria-label="Открыть фото: Экипировка команды 2020">
                     <div class="gallery-image-wrapper">
                         <img src="img/gallery/20202.jpg" alt="Экипировка команды" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-icon">
                                 <i class="fas fa-search-plus"></i>
                             </div>
+                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
                         </div>
+                        <span class="gallery-badge">2020</span>
                     </div>
                     <figcaption class="gallery-caption">
-                        <h4>закрытие 2020</h4>
-                        <p> </p>
+                        <div class="gallery-caption-top">
+                            <h4>ЭКИПИРОВКА</h4>
+                            <span class="gallery-meta">СЕЗОН 2020</span>
+                        </div>
+                        <p>Подготовка снаряжения и общий вид комплекта команды.</p>
                     </figcaption>
                 </figure>
 
-                <figure class="gallery-item" data-index="4">
+                <figure class="gallery-item" data-index="4" data-year="2024" tabindex="0" aria-label="Открыть фото: Ночная игра 2024">
                     <div class="gallery-image-wrapper">
                         <img src="img/gallery/202401.jpg" alt="Ночная игра" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-icon">
                                 <i class="fas fa-search-plus"></i>
                             </div>
+                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
                         </div>
+                        <span class="gallery-badge">2024</span>
                     </div>
                     <figcaption class="gallery-caption">
-                        <h4>закрытие 2024</h4>
-                        <p> </p>
+                        <div class="gallery-caption-top">
+                            <h4>НОЧНАЯ ИГРА</h4>
+                            <span class="gallery-meta">2024</span>
+                        </div>
+                        <p>Эпизод ночного сценария с выходом на позицию.</p>
                     </figcaption>
                 </figure>
 
-                <figure class="gallery-item" data-index="5">
+                <figure class="gallery-item" data-index="5" data-year="2024" tabindex="0" aria-label="Открыть фото: Групповое фото 2024">
                     <div class="gallery-image-wrapper">
                         <img src="img/gallery/202402.jpg" alt="Групповое фото" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-icon">
                                 <i class="fas fa-search-plus"></i>
                             </div>
+                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
                         </div>
+                        <span class="gallery-badge">2024</span>
                     </div>
+                    <figcaption class="gallery-caption">
+                        <div class="gallery-caption-top">
+                            <h4>ГРУППОВОЕ ФОТО</h4>
+                            <span class="gallery-meta">ФИНАЛ ИГРЫ</span>
+                        </div>
+                        <p>Финальный кадр после завершения выезда.</p>
+                    </figcaption>
                 </figure>
             </div>
         </div>
@@ -565,8 +844,8 @@
             </div>
         </div>
     </footer>
-<script src="script.js"></script>
+    <script src="script.js"></script>
+
 </body>
+
 </html>
-
-
