@@ -273,3 +273,26 @@ function initLightbox() {
 
     lightboxImage.style.transition = 'opacity 0.2s';
 }
+
+
+// Анимация кнопки при наведении
+document.querySelectorAll('.btn-join-professional').forEach(btn => {
+    btn.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+    });
+    
+    btn.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
+
+// Плавный скролл к анкете (если форма на той же странице)
+document.querySelectorAll('a[href^="#form"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
