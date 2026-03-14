@@ -296,3 +296,74 @@ document.querySelectorAll('a[href^="#form"]').forEach(anchor => {
         }
     });
 });
+
+// =========================
+// АВТО-СОРТИРОВКА ГАЛЕРЕИ
+// =========================
+function autoSortGallery() {
+    const galleryGrid = document.querySelector('.gallery-grid');
+    if (!galleryGrid) return;
+    
+    const items = Array.from(galleryGrid.querySelectorAll('.gallery-item'));
+    if (!items.length) return;
+    
+    // Сортировка: новые фото первые (по data-date)
+    items.sort((a, b) => {
+        const dateA = new Date(a.dataset.date || '0000-00-00');
+        const dateB = new Date(b.dataset.date || '0000-00-00');
+        return dateB - dateA; // Обратный порядок (новые первые)
+    });
+    
+    // Перемещаем отсортированные элементы и назначаем индексы
+    items.forEach((item, index) => {
+        item.dataset.index = index + 1; // Авто-индекс
+        galleryGrid.appendChild(item);
+    });
+}
+
+// Обновление счётчика в лайтбоксе
+function updateLightboxCounter() {
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    const lightbox = document.getElementById('lightbox');
+    const galleryItems = document.querySelectorAll('.gallery-item:not(.is-hidden)');
+    
+    if (lightboxCounter && lightbox && lightbox.classList.contains('active')) {
+        const currentIndex = parseInt(lightbox.dataset.currentIndex || '1');
+        lightboxCounter.textContent = `${currentIndex} / ${galleryItems.length}`;
+    }
+}
+
+// Запуск сортировки после загрузки страницы
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(autoSortGallery, 100);
+});
+
+// Обновление индексов при фильтрации
+function initGalleryFilters() {
+    const filters = document.querySelectorAll('.gallery-filter');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    if (!filters.length || !galleryItems.length) return;
+
+    filters.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
+
+            filters.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            galleryItems.forEach(item => {
+                const shouldShow = filter === 'all' || item.dataset.year === filter;
+                item.classList.toggle('is-hidden', !shouldShow);
+            });
+            
+            // Пересчитываем индексы после фильтрации
+            setTimeout(() => {
+                const visibleItems = Array.from(galleryItems).filter(item => !item.classList.contains('is-hidden'));
+                visibleItems.forEach((item, index) => {
+                    item.dataset.index = index + 1;
+                });
+                updateLightboxCounter();
+            }, 50);
+        });
+    });
+}
