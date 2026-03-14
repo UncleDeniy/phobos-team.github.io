@@ -275,7 +275,7 @@ function initLightbox() {
 }
 
 
-// Анимация кнопки при наведении
+ 
 document.querySelectorAll('.btn-join-professional').forEach(btn => {
     btn.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-5px)';
@@ -286,7 +286,7 @@ document.querySelectorAll('.btn-join-professional').forEach(btn => {
     });
 });
 
-// Плавный скролл к анкете (если форма на той же странице)
+ 
 document.querySelectorAll('a[href^="#form"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -297,9 +297,7 @@ document.querySelectorAll('a[href^="#form"]').forEach(anchor => {
     });
 });
 
-// =========================
-// АВТО-СОРТИРОВКА ГАЛЕРЕИ
-// =========================
+ 
 function autoSortGallery() {
     const galleryGrid = document.querySelector('.gallery-grid');
     if (!galleryGrid) return;
@@ -307,21 +305,20 @@ function autoSortGallery() {
     const items = Array.from(galleryGrid.querySelectorAll('.gallery-item'));
     if (!items.length) return;
     
-    // Сортировка: новые фото первые (по data-date)
+ 
     items.sort((a, b) => {
         const dateA = new Date(a.dataset.date || '0000-00-00');
         const dateB = new Date(b.dataset.date || '0000-00-00');
         return dateB - dateA; // Обратный порядок (новые первые)
     });
     
-    // Перемещаем отсортированные элементы и назначаем индексы
+ 
     items.forEach((item, index) => {
         item.dataset.index = index + 1; // Авто-индекс
         galleryGrid.appendChild(item);
     });
 }
-
-// Обновление счётчика в лайтбоксе
+ 
 function updateLightboxCounter() {
     const lightboxCounter = document.getElementById('lightboxCounter');
     const lightbox = document.getElementById('lightbox');
@@ -333,12 +330,12 @@ function updateLightboxCounter() {
     }
 }
 
-// Запуск сортировки после загрузки страницы
+ 
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(autoSortGallery, 100);
 });
 
-// Обновление индексов при фильтрации
+ 
 function initGalleryFilters() {
     const filters = document.querySelectorAll('.gallery-filter');
     const galleryItems = document.querySelectorAll('.gallery-item');
@@ -356,7 +353,7 @@ function initGalleryFilters() {
                 item.classList.toggle('is-hidden', !shouldShow);
             });
             
-            // Пересчитываем индексы после фильтрации
+ 
             setTimeout(() => {
                 const visibleItems = Array.from(galleryItems).filter(item => !item.classList.contains('is-hidden'));
                 visibleItems.forEach((item, index) => {
@@ -366,4 +363,40 @@ function initGalleryFilters() {
             }, 50);
         });
     });
+}	
+
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 200; // чем меньше, тем быстрее
+    
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const increment = target / speed;
+        
+        const updateCounter = () => {
+            const current = +counter.textContent;
+            if (current < target) {
+                counter.textContent = Math.ceil(current + increment);
+                setTimeout(updateCounter, 20);
+            } else {
+                counter.textContent = target;
+            }
+        };
+        
+        updateCounter();
+    });
 }
+
+ 
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.team-stats-block').forEach(block => {
+    statsObserver.observe(block);
+});

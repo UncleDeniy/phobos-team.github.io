@@ -6,6 +6,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Calculator';
+    src: url('fonts/calculator.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --primary-color: #4B5320;
     --primary-light: #5D6628;
@@ -544,6 +552,7 @@ h6 {
     border: 2px solid var(--primary-color);
     background: var(--bg-card);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
 .frame-corner {
@@ -583,9 +592,12 @@ h6 {
 
 .tactical-frame img {
     width: 100%;
+    height: auto;
     display: block;
     filter: grayscale(30%) contrast(110%);
     transition: all 0.3s;
+    object-fit: cover;
+    max-width: 100%;
 }
 
 .tactical-frame:hover img {
@@ -1241,6 +1253,9 @@ footer {
     .principles-grid {
         grid-template-columns: 1fr;
     }
+    .tactical-frame {
+        padding: 12px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1275,6 +1290,9 @@ footer {
     }
     .burger.toggle div:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+    }
+    .hero-content {
+        padding-top: 140px !important;
     }
     .nav-active {
         transform: translateX(0%);
@@ -1325,6 +1343,7 @@ footer {
     .team-emblem {
         width: 120px;
         height: 120px;
+        margin-bottom: 25px;
     }
     @keyframes navLinkFade {
         from {
@@ -1352,6 +1371,9 @@ footer {
     }
     .stat-box {
         width: 100%;
+    }
+    .tactical-frame {
+        padding: 12px;
     }
 }
 
@@ -1715,6 +1737,9 @@ footer {
         top: 15px;
         right: 15px;
     }
+    .tactical-frame {
+        padding: 12px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1737,34 +1762,28 @@ footer {
     .lightbox-counter {
         bottom: 18px;
     }
+    .tactical-frame {
+        padding: 12px;
+    }
 }
-
-
-/* Исправление для карточек принципов */
 
 .principle-card h3 {
     font-size: 1rem;
-    /* Уменьшаем с 1.2rem */
     margin-bottom: 10px;
     color: #fff;
     word-wrap: break-word;
-    /* Разрешаем перенос */
     white-space: normal;
-    /* Разрешаем перенос строк */
     line-height: 1.2;
     padding: 0 5px;
-    /* Небольшой отступ по бокам */
 }
 
 .principle-card {
     text-align: center;
     padding: 25px 15px;
-    /* Увеличиваем боковые отступы */
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     transition: all 0.3s;
     min-height: 220px;
-    /* Фиксированная высота */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1778,23 +1797,21 @@ footer {
 
 .principle-card p {
     font-size: 0.75rem;
-    /* Чуть меньше текст описания */
     color: var(--text-muted);
     letter-spacing: 1px;
     margin-top: 8px;
 }
 
-
-/* Для мобильных устройств */
-
 @media screen and (max-width: 768px) {
     .principle-card h3 {
         font-size: 0.9rem;
-        /* Ещё меньше на мобильных */
     }
     .principle-card {
         padding: 20px 10px;
         min-height: 200px;
+    }
+    .tactical-frame {
+        padding: 12px;
     }
 }
 
@@ -1802,7 +1819,6 @@ footer {
     .principle-card h3 {
         font-size: 0.85rem;
         word-break: break-word;
-        /* Переносим длинные слова */
     }
 }
 
@@ -1837,11 +1853,6 @@ footer {
     background-size: 32px 32px;
     opacity: 0.35;
 }
-
-
-/* =========================
-   ИЕРАРХИЯ
-========================= */
 
 .command-overview,
 .uniform-intel-bar {
@@ -2068,11 +2079,6 @@ footer {
     line-height: 1.75;
     margin: 0;
 }
-
-
-/* =========================
-   СНАРЯЖЕНИЕ
-========================= */
 
 .uniform-panel {
     background: linear-gradient(180deg, rgba(26, 26, 26, 0.98) 0%, rgba(17, 17, 17, 0.98) 100%);
@@ -2339,11 +2345,6 @@ footer {
     margin-bottom: 35px;
 }
 
-
-/* =========================
-   АДАПТИВ
-========================= */
-
 @media screen and (max-width: 1024px) {
     .command-overview,
     .uniform-intel-bar,
@@ -2354,6 +2355,9 @@ footer {
     }
     .rank-card.commander {
         min-width: 100%;
+    }
+    .tactical-frame {
+        padding: 12px;
     }
 }
 
@@ -2401,6 +2405,9 @@ footer {
     .spec-value {
         text-align: left;
     }
+    .tactical-frame {
+        padding: 12px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -2418,11 +2425,17 @@ footer {
     .uniform-panel-subtitle {
         font-size: 0.68rem;
     }
+    .tactical-frame {
+        padding: 12px;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .structure-note {
         flex-direction: column;
+    }
+    .tactical-frame {
+        padding: 12px;
     }
 }
 
@@ -2704,6 +2717,9 @@ footer {
     .join-requirements {
         padding: 30px 20px;
     }
+    .tactical-frame {
+        padding: 12px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -2716,6 +2732,9 @@ footer {
     .join-contact-btn {
         padding: 12px 15px;
         font-size: 0.85rem;
+    }
+    .tactical-frame {
+        padding: 12px;
     }
 }
 
@@ -3106,6 +3125,9 @@ footer {
     .uniform-checklist-block {
         grid-template-columns: 1fr;
     }
+    .tactical-frame {
+        padding: 12px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -3137,6 +3159,9 @@ footer {
     .spec-value {
         text-align: left;
     }
+    .tactical-frame {
+        padding: 12px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -3151,6 +3176,9 @@ footer {
     .uniform-panel-subtitle,
     .intel-label {
         font-size: 0.68rem;
+    }
+    .tactical-frame {
+        padding: 12px;
     }
 }
 
@@ -3424,6 +3452,9 @@ footer {
     .join-card-body {
         padding: 20px;
     }
+    .tactical-frame {
+        padding: 12px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -3444,5 +3475,303 @@ footer {
     }
     .join-req-item span {
         font-size: 0.88rem;
+    }
+    .tactical-frame {
+        padding: 12px;
+    }
+}
+
+.team-stats-block {
+    margin-top: 60px;
+    padding: 50px 40px;
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.98) 0%, rgba(18, 18, 18, 0.98) 100%);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-stats-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+}
+
+.stats-title {
+    text-align: center;
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(75, 83, 32, 0.05);
+    border: 1px solid var(--border-color);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--border-color);
+    transition: background 0.4s;
+}
+
+.stat-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-color);
+    background: rgba(212, 175, 55, 0.08);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.stat-item:hover::before {
+    background: var(--accent-color);
+}
+
+.stat-item i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.stat-number {
+    display: block;
+    font-family: 'Calculator', var(--font-main);
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.stat-label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .stat-number {
+        font-size: 2.2rem;
+    }
+    .stat-item i {
+        font-size: 2rem;
+    }
+    .tactical-frame {
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-stats-block {
+        padding: 35px 20px;
+    }
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    .tactical-frame {
+        padding: 12px;
+    }
+}
+
+.faq-section {
+    background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-dark) 100%);
+    position: relative;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(rgba(75, 83, 32, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(75, 83, 32, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.5;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-card {
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.98) 0%, rgba(18, 18, 18, 0.98) 100%);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    transition: background 0.4s;
+}
+
+.faq-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-color);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.faq-card:hover::before {
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+}
+
+.faq-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.faq-icon i {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+}
+
+.faq-card h3 {
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    line-height: 1.4;
+}
+
+.faq-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.faq-card strong {
+    color: var(--accent-color);
+}
+
+.faq-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.faq-cta {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.98) 0%, rgba(18, 18, 18, 0.98) 100%);
+    border: 2px solid var(--accent-color);
+    position: relative;
+    z-index: 1;
+}
+
+.faq-cta p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.btn-faq {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 45px;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    border: 2px solid var(--primary-color);
+    transition: all 0.4s;
+}
+
+.btn-faq:hover {
+    background: transparent;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    .faq-card {
+        padding: 25px 20px;
+    }
+    .faq-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .faq-icon i {
+        font-size: 1.5rem;
+    }
+    .faq-card h3 {
+        font-size: 1rem;
+    }
+    .tactical-frame {
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .faq-cta {
+        padding: 30px 20px;
+    }
+    .btn-faq {
+        padding: 15px 30px;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
+    }
+    .tactical-frame {
+        padding: 12px;
     }
 }
