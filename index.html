@@ -15,8 +15,7 @@
     <meta property="og:url" content="https://uncledeni.github.io">
     <meta property="og:type" content="website">
 
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
 
     <link rel="preload" href="fonts/dsmoster.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="fonts/calculator.ttf" as="font" type="font/ttf" crossorigin>
@@ -84,6 +83,35 @@
             <span>ПРОКРУТИТЬ ВНИЗ</span>
         </div>
     </section>
+
+<section id="trailer" class="trailer-section">
+    <div class="container">
+        <div class="trailer-header">
+            <div class="trailer-tag">
+                <span class="blink-dot"></span>
+                ОФИЦИАЛЬНЫЙ ТРЕЙЛЕР
+            </div>
+            <h2 class="section-title">ВИДЕО О КОМАНДЕ</h2>
+            <p class="trailer-subtitle">Кратко о том, кто мы и чем занимаемся</p>
+        </div>
+
+        <div class="trailer-video-wrapper" id="trailerVideoWrapper">
+            <video 
+                id="teamVideo" 
+                class="trailer-video" 
+                controls
+                preload="metadata"
+                playsinline
+                poster="./img/video-poster.jpg"
+                style="width:100%; height:100%; display:block; background:#000;"
+            >
+                <source src="video/intro.mp4" type="video/mp4">
+                Ваш браузер не поддерживает HTML5-видео.
+            </video>
+        </div>
+    </div>
+</section>
+
 
     <section id="about" class="section dark-bg">
         <div class="container">
@@ -749,360 +777,313 @@
 
 
 
-    <section id="gallery" class="gallery-section section">
-        <div class="container">
-            <div class="gallery-section-header">
-                <h2 class="section-title"><i class="fas fa-images"></i>ГАЛЕРЕЯ</h2>
-                <p class="gallery-section-text">
-                    Архив выездов, командных построений и игровых эпизодов. Нажми на карточку, чтобы открыть снимок в полном размере.
-                </p>
-            </div>
+<section id="gallery" class="gallery-section section">
+    <div class="container">
+        <div class="gallery-section-header">
+            <h2 class="section-title"><i class="fas fa-images"></i> ГАЛЕРЕЯ</h2>
+            <p class="gallery-section-text">
+                Архив выездов, командных построений и игровых эпизодов. 
+                Альбомы сгруппированы по мероприятиям.
+            </p>
+        </div>
 
-            <div class="gallery-toolbar">
-                <button class="gallery-filter active" data-filter="all">ВСЕ</button>
-                <button class="gallery-filter" data-filter="2026">2026</button>
-                <button class="gallery-filter" data-filter="2025">2025</button>
-                <button class="gallery-filter" data-filter="2024">2024</button>
-            </div>
+        <!-- Фильтры с красивыми кнопками -->
+        <div class="gallery-toolbar">
+            <button class="gallery-filter active" data-filter="all">
+                <span class="filter-text">ВСЕ</span>
+                <span class="filter-count">8</span>
+            </button>
+            <button class="gallery-filter" data-filter="2026">
+                <span class="filter-text">2026</span>
+                <span class="filter-count">3</span>
+            </button>
+            <button class="gallery-filter" data-filter="2025">
+                <span class="filter-text">2025</span>
+                <span class="filter-count">3</span>
+            </button>
+            <button class="gallery-filter" data-filter="2024">
+                <span class="filter-text">2024</span>
+                <span class="filter-count">2</span>
+            </button>
+            <button class="gallery-filter" data-filter="2023">
+            <span class="filter-text">2023</span>
+            <span class="filter-count">1</span>
+            </button>
+        </div>
 
-            <div class="gallery-item" data-year="2026" data-date="2026-05-01">
-                <div class="gallery-image-wrapper">
-                    <img src="https://sun9-74.vkuserphoto.ru/s/v1/ig2/ocBI-17GIv70Oc3GCXq0HJxwR7WSO1jpwfa_BAF19PU2sAAEPIfYelAytYVQHqxj0fiXh5avn5NJwE3HyYcYzwRU.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&u=G-2VPxjabKLnZNlhV8_KVRoBjtRitD4ZsWDsTJDk76Q&cs=1280x0"
-                        alt="Первая тренировка в сезоне">
-                    <div class="gallery-overlay">
-                        <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                        <span class="gallery-overlay-text">ОТКРЫТЬ</span>
-                    </div>
-                    <span class="gallery-badge">2026</span>
-                </div>
-                <div class="gallery-caption">
-                    <div class="gallery-caption-top">
-                        <h4>Первая тренировка в сезоне</h4>
-                        <span class="gallery-meta">2026</span>
-                    </div>
-                    <p>Первая тренировка в сезоне.</p>
-                </div>
-            </div>
+        <!-- Сетка альбомов -->
+        <div class="albums-grid">
             
-            <div class="gallery-item" data-year="2026" data-date="2026-06-01">
-                <div class="gallery-image-wrapper">
-                    <img src="https://sun9-39.vkuserphoto.ru/s/v1/ig2/OPsDWbud9kAQlI5MjWFPxaUU2kd6A-ynH3m8j8ljbvD5YCJYGI1KUhYIdb4p9O5CC_Wpyiqq9phjedQyAxEwgyWA.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=1280x0"
-                        alt="Рейдовая игра MSRV">
-                    <div class="gallery-overlay">
-                        <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                        <span class="gallery-overlay-text">ОТКРЫТЬ</span>
+            <!-- Альбом 1: Барсогория 9 -->
+            <div class="album-card" data-year="2026" data-album-id="1">
+                <div class="album-cover">
+                    <img src="img/gallery/bars9/1.jpg" alt="Барсогория 9" class="album-main-photo">
+                    <div class="album-overlay">
+                        <div class="album-overlay-content">
+                            <i class="fas fa-eye"></i>
+                            <span>Смотреть альбом</span>
+                        </div>
                     </div>
-                    <span class="gallery-badge">2026</span>
+                    <div class="album-badge">2026</div>
                 </div>
-                <div class="gallery-caption">
-                    <div class="gallery-caption-top">
-                        <h4>Рейдовая игра MSRV</h4>
-                        <span class="gallery-meta">2026</span>
+                <div class="album-info">
+                    <h3 class="album-title">Барсогория 9</h3>
+                    <div class="album-meta">
+                        <span class="album-photos-count">
+                            <i class="fas fa-camera"></i> 6 фото
+                        </span>
+                        <span class="album-date">2026</span>
                     </div>
-                    <p>Рейдовая игра MSRV.</p>
-                </div>
-            </div>
-            
-            <div class="gallery-item" data-year="2026" data-date="2026-04-01">
-                <div class="gallery-image-wrapper">
-                    <img src="https://sun9-47.vkuserphoto.ru/s/v1/ig2/VUd5Do6YReirVSsWQmBQUb-0T1XKcscS47Jx3OVYW1b2mZeSra4gALgm9WQGLuKp7Wy669e17EUvqtWB5oaUw-pW.jpg?quality=95&as=32x21,48x32,72x48,108x72,160x106,240x160,360x239,480x319,540x359,640x425,720x479,1080x718,1280x851&from=bu&cs=1280x0"
-                        alt="Открытие сезона 2026">
-                    <div class="gallery-overlay">
-                        <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                        <span class="gallery-overlay-text">ОТКРЫТЬ</span>
-                    </div>
-                    <span class="gallery-badge">2026</span>
-                </div>
-                <div class="gallery-caption">
-                    <div class="gallery-caption-top">
-                        <h4>Открытие сезона 2026</h4>
-                        <span class="gallery-meta">2026</span>
-                    </div>
-                    <p>Открытие сезона 2026.</p>
                 </div>
             </div>
-            
-            <div class="gallery-item" data-year="2026" data-date="2026-04-01">
-                <div class="gallery-image-wrapper">
-                    <img src="https://sun9-20.vkuserphoto.ru/s/v1/ig2/6hlfqSkzJGHHU9b4uO0z9GbgE6CqNXDlDFMKCcn638E1B4hV4AjfU82xK3tff8RDi0eFOavDS38I_NJxGu2kcLaE.jpg?quality=95&as=32x21,48x32,72x48,108x72,160x106,240x160,360x239,480x319,540x359,640x425,720x479,1080x718,1280x851&from=bu&cs=1280x0"
-                        alt="Открытие сезона 2026">
-                    <div class="gallery-overlay">
-                        <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                        <span class="gallery-overlay-text">ОТКРЫТЬ</span>
+
+            <!-- Альбом 2: Открытие сезона 2026 -->
+            <div class="album-card" data-year="2026" data-album-id="2">
+                <div class="album-cover">
+                    <img src="img/gallery/Открытие сезона 2026/4.jpg" alt="Открытие сезона 2026" class="album-main-photo">
+                    <div class="album-overlay">
+                        <div class="album-overlay-content">
+                            <i class="fas fa-eye"></i>
+                            <span>Смотреть альбом</span>
+                        </div>
                     </div>
-                    <span class="gallery-badge">2026</span>
+                    <div class="album-badge">2026</div>
                 </div>
-                <div class="gallery-caption">
-                    <div class="gallery-caption-top">
-                        <h4>Открытие сезона 2026</h4>
-                        <span class="gallery-meta">2026</span>
+                <div class="album-info">
+                    <h3 class="album-title">Открытие сезона 2026</h3>
+                    <div class="album-meta">
+                        <span class="album-photos-count">
+                            <i class="fas fa-camera"></i> 2 фото
+                        </span>
+                        <span class="album-date">2026</span>
                     </div>
-                    <p>Открытие сезона 2026.</p>
                 </div>
             </div>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item" data-year="2025" data-date="2025-10-27">
-                    <div class="gallery-image-wrapper">
-                        <img src="https://sun9-40.userapi.com/s/v1/ig2/xAqKPgpshIjmV5rYlKg2kLvPpkzll1yp5k1prGbO356Y64zuvaF78N7U98EaX2Sthn4OXunUpIn5NZxoHTdVMuvo.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=1280x0"
-                            alt="Открытие сезона 2025">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
+
+            <!-- Альбом 3: Рейдовая игра MSRV -->
+            <div class="album-card" data-year="2026" data-album-id="3">
+                <div class="album-cover">
+                    <img src="img/gallery/Рейдовая игра MSRV/2.jpg" alt="Рейдовая игра MSRV" class="album-main-photo">
+                    <div class="album-overlay">
+                        <div class="album-overlay-content">
+                            <i class="fas fa-eye"></i>
+                            <span>Смотреть альбом</span>
                         </div>
-                        <span class="gallery-badge">2025</span>
                     </div>
-                    <div class="gallery-caption">
-                        <div class="gallery-caption-top">
-                            <h4>Открытие сезона 2025</h4>
-                            <span class="gallery-meta">27 ОКТЯБРЯ 2025</span>
-                        </div>
-                        <p>Открытие сезона 2025.</p>
+                    <div class="album-badge">2026</div>
+                </div>
+                <div class="album-info">
+                    <h3 class="album-title">Рейдовая игра MSRV</h3>
+                    <div class="album-meta">
+                        <span class="album-photos-count">
+                            <i class="fas fa-camera"></i> 2 фото
+                        </span>
+                        <span class="album-date">2026</span>
                     </div>
                 </div>
+            </div>
 
-                <div class="gallery-item" data-year="2025" data-date="2025-10-27">
-                    <div class="gallery-image-wrapper">
-                        <img src="https://sun9-32.userapi.com/s/v1/ig2/dhPmUxq3JzuWfC02C51gdDbW7yNbq0PPSqG75v2waZDnNqcRe6cg75Y9TMSJxABeR0Do60R4Mj48ZYDtoQ_OeR5b.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960&from=bu&cs=1280x0"
-                            alt="Открытие сезона 2025">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
-                        </div>
-                        <span class="gallery-badge">2025</span>
-                    </div>
-                    <div class="gallery-caption">
-                        <div class="gallery-caption-top">
-                            <h4>Открытие сезона 2025</h4>
-                            <span class="gallery-meta">27 ОКТЯБРЯ 2025</span>
-                        </div>
-                        <p>Открытие сезона 2025.</p>
+        <!-- Альбом 4: Открытие сезона 2025 -->
+        <div class="album-card" data-year="2025" data-album-id="4">
+            <div class="album-cover">
+                <img src="img/gallery/Открытие 2025/01.jpg" alt="Открытие сезона 2025" class="album-main-photo">
+                <div class="album-overlay">
+                    <div class="album-overlay-content">
+                        <i class="fas fa-eye"></i>
+                        <span>Смотреть альбом</span>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-year="2025" data-date="2025-10-27">
-                    <div class="gallery-image-wrapper">
-                        <img src="https://sun9-39.userapi.com/s/v1/ig2/Z6-sZFfWU_rzfR8L06OEpcGqgkoOBmjNLWDNMHIbyTNK7zTJZNzhqEKe5u1onh7p9_Go_R9grDb5BZEICzSvhpEf.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=1280x0"
-                            alt="Открытие сезона 2025">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
-                        </div>
-                        <span class="gallery-badge">2025</span>
-                    </div>
-                    <div class="gallery-caption">
-                        <div class="gallery-caption-top">
-                            <h4>Открытие сезона 2025</h4>
-                            <span class="gallery-meta">27 ОКТЯБРЯ 2025</span>
-                        </div>
-                        <p>Открытие сезона 2025.</p>
-                    </div>
+                <div class="album-badge">2025</div>
+            </div>
+            <div class="album-info">
+                <h3 class="album-title">Открытие сезона 2025</h3>
+                <div class="album-meta">
+                    <span class="album-photos-count">
+                        <i class="fas fa-camera"></i> 19 фото
+                    </span>
+                    <span class="album-date">2025</span>
                 </div>
-
-                <div class="gallery-item" data-year="2025" data-date="2025-10-27">
-                    <div class="gallery-image-wrapper">
-                        <img src="https://sun9-22.userapi.com/s/v1/ig2/7t1T-_I92_98vGGNiH4rbuSuYRypP1MfPeaSMqwajAoy8dlV3URevt_ZnKS8dcRC48boExddskCcV3HtnHqmKMKV.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960&from=bu&cs=1280x0"
-                            alt="MSRV Operations">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
-                        </div>
-                        <span class="gallery-badge">2025</span>
-                    </div>
-                    <div class="gallery-caption">
-                        <div class="gallery-caption-top">
-                            <h4>MSRV Operations🦅</h4>
-                            <span class="gallery-meta">27 ОКТЯБРЯ 2025</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-year="2025" data-date="2025-10-27">
-                    <div class="gallery-image-wrapper">
-                        <img src="https://sun9-53.userapi.com/s/v1/ig2/JevZDTK0faDn5mY9BdtGplqsQResx0JI3p8WfA1erj0yj8gFm2CroseVld3ckKeTB0dZRBtI8dWOG6AYTlzE0k91.jpg?quality=95&as=32x21,48x32,72x48,108x72,160x107,240x160,360x240,480x320,540x360,640x426,720x480,1080x720,1280x853&from=bu&cs=1280x0"
-                            alt="MSRV Operations">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
-                        </div>
-                        <span class="gallery-badge">2025</span>
-                    </div>
-                    <div class="gallery-caption">
-                        <div class="gallery-caption-top">
-                            <h4>MSRV Operations🦅</h4>
-                            <span class="gallery-meta">27 ОКТЯБРЯ 2025</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-year="2025" data-date="2025-10-27">
-                    <div class="gallery-image-wrapper">
-                        <img src="https://sun9-75.userapi.com/s/v1/ig2/a2GVoogNLpP-utmIKq3aP2VmAmP6Ly4C-MEDyEd-HpVhPRYk0-92X3wSAl-kQlyrisf5cysiz4niFtk2hLdd5I8t.jpg?quality=95&as=32x21,48x32,72x48,108x72,160x107,240x160,360x240,480x320,540x360,640x426,720x480,1080x720,1280x853&from=bu&cs=1280x0"
-                            alt="MSRV Operations">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
-                        </div>
-                        <span class="gallery-badge">2025</span>
-                    </div>
-                    <div class="gallery-caption">
-                        <div class="gallery-caption-top">
-                            <h4>MSRV Operations🦅</h4>
-                            <span class="gallery-meta">27 ОКТЯБРЯ 2025</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-year="2025" data-date="2025-10-27">
-                    <div class="gallery-image-wrapper">
-                        <img src="https://sun9-63.userapi.com/s/v1/ig2/r96HmxXWMSCFviuAM30dFrhy2KYzjA-1TdhktQQE_DXla1MDnej6nsD1x4IUz9dQFmgY1wqOgtnzOdMrqm_WSPvM.jpg?quality=95&as=32x21,48x32,72x48,108x72,160x107,240x160,360x240,480x320,540x360,640x426,720x480,1080x720,1280x853&from=bu&cs=1280x0"
-                            alt="MSRV Operations">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
-                        </div>
-                        <span class="gallery-badge">2025</span>
-                    </div>
-                    <div class="gallery-caption">
-                        <div class="gallery-caption-top">
-                            <h4>MSRV Operations🦅</h4>
-                            <span class="gallery-meta">27 ОКТЯБРЯ 2025</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-year="2025" data-date="2025-10-27">
-                    <div class="gallery-image-wrapper">
-                        <img src="https://sun9-76.userapi.com/s/v1/ig2/2L5yC61BdNGTMML4V8MO1epz2QUivzopgcRxNp1_qIGohxUKcx4lvYd_k4HHNUie6caubFFhRKvsribXl7rD2l0C.jpg?quality=95&as=32x21,48x32,72x47,108x71,160x105,240x158,360x237,480x316,540x356,640x421,720x474,1080x711,1280x843&from=bu&cs=1280x0"
-                            alt="MSRV Барсогория 8">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
-                        </div>
-                        <span class="gallery-badge">2025</span>
-                    </div>
-                    <div class="gallery-caption">
-                        <div class="gallery-caption-top">
-                            <h4>MSRV Барсогория 8</h4>
-                            <span class="gallery-meta">27 ОКТЯБРЯ 2025</span>
-                        </div>
-                        <p>Выезд на Барсогорию 8.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-year="2025" data-date="2025-10-27">
-                    <div class="gallery-image-wrapper">
-                        <img src="https://sun9-26.userapi.com/s/v1/ig2/xtSVdyKQL3tcHvuNE0xL8cBLtlsHs4K7OgSVpSVn2mpI_nLHT1xz0a2bQlp1YbSW0yOMsin0HmAl_1EdRkW_QqOO.jpg?quality=95&as=32x14,48x22,72x32,108x49,160x72,240x108,360x162,480x216,540x243,640x288,720x324,1080x486,1160x522&from=bu&cs=1160x0"
-                            alt="MSRV Барсогория 8">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
-                        </div>
-                        <span class="gallery-badge">2025</span>
-                    </div>
-                    <div class="gallery-caption">
-                        <div class="gallery-caption-top">
-                            <h4>MSRV Барсогория 8</h4>
-                            <span class="gallery-meta">27 ОКТЯБРЯ 2025</span>
-                        </div>
-                        <p>Выезд на Барсогорию 8.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-year="2025" data-date="2025-10-27">
-                    <div class="gallery-image-wrapper">
-                        <img src="https://sun9-15.userapi.com/s/v1/ig2/Qkmmz-bCProtOojP4QP87xRYbgIqbYGjjYS8Giq25u0Vo7NL4eXMB5tfeJuUTCaQRXLrbaH0u5eT6lPy-EGn2hCl.jpg?quality=95&as=32x43,48x64,72x96,108x145,160x214,240x321,360x482,480x643,540x723,640x857,720x964,750x1004&from=bu&cs=750x0"
-                            alt="MSRV Барсогория 8">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
-                        </div>
-                        <span class="gallery-badge">2025</span>
-                    </div>
-                    <div class="gallery-caption">
-                        <div class="gallery-caption-top">
-                            <h4>MSRV Барсогория 8</h4>
-                            <span class="gallery-meta">27 ОКТЯБРЯ 2025</span>
-                        </div>
-                        <p>Выезд на Барсогорию 8.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-year="2024" data-date="2024-08-23">
-                    <div class="gallery-image-wrapper">
-                        <img src="https://sun9-52.userapi.com/s/v1/ig2/ujFvhCm6K0d0O36leLtcH9xkKlqCtukQQf_Rgpl39rGTx1W4A-UhrbpSDFz_5rDBErR5XYiXld7ugX-18k-UXFoa.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960&from=bu&cs=1280x0"
-                            alt="Обитаемый остров 2024🤙">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
-                        </div>
-                        <span class="gallery-badge">2024</span>
-                    </div>
-                    <div class="gallery-caption">
-                        <div class="gallery-caption-top">
-                            <h4>Обитаемый остров 2024🤙</h4>
-                            <span class="gallery-meta">23 СЕНТЯБРЯ 2024</span>
-                        </div>
-                        <p>Обитаемый остров 2024🤙</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-year="2024" data-date="2024-10-21">
-                    <div class="gallery-image-wrapper">
-                        <img src="https://sun9-77.userapi.com/s/v1/ig2/-LqyBsUU55CmCnG76T4u5YG6jubzAr2R6T-ephGN8Konl82hQTcuaSkcNe3yCC7OCliRrydOi_CHQdPRiThr8X_L.jpg?quality=95&crop=0,0,1280,1280&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280&from=bu&cs=1280x0"
-                            alt="Закрытие 2024">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
-                            <span class="gallery-overlay-text">ОТКРЫТЬ</span>
-                        </div>
-                        <span class="gallery-badge">2024</span>
-                    </div>
-                    <div class="gallery-caption">
-                        <div class="gallery-caption-top">
-                            <h4>Закрытие 2024</h4>
-                            <span class="gallery-meta">21 ОКТЯБРЯ 2024</span>
-                        </div>
-                        <p>Закрытие сезона 2024.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </section>
 
-    <div id="lightbox" class="lightbox">
-        <button class="lightbox-close"><i class="fas fa-times"></i></button>
-        <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
-        <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
-        <div class="lightbox-content">
-            <img id="lightboxImage" class="lightbox-image" src="" alt="">
-            <div class="lightbox-caption" id="lightboxCaption">
-                <h3></h3>
-                <p></p>
+            <!-- Альбом 5: MSRV Operations -->
+            <div class="album-card" data-year="2025" data-album-id="5">
+                <div class="album-cover">
+                    <img src="img/gallery/msrvop/1.jpg" alt="MSRV Operations" class="album-main-photo">
+                    <div class="album-overlay">
+                        <div class="album-overlay-content">
+                            <i class="fas fa-eye"></i>
+                            <span>Смотреть альбом</span>
+                        </div>
+                    </div>
+                    <div class="album-badge">2025</div>
+                </div>
+                <div class="album-info">
+                    <h3 class="album-title">MSRV Operations 🦅</h3>
+                    <div class="album-meta">
+                        <span class="album-photos-count">
+                            <i class="fas fa-camera"></i> 5 фото
+                        </span>
+                        <span class="album-date">2025</span>
+                    </div>
+                </div>
             </div>
+
+            <!-- Альбом 6: MSRV Барсогория 8 -->
+            <div class="album-card" data-year="2025" data-album-id="6">
+                <div class="album-cover">
+                    <img src="img/gallery/MSRV Барсогория 8/1.jpg" alt="MSRV Барсогория 8" class="album-main-photo">
+                    <div class="album-overlay">
+                        <div class="album-overlay-content">
+                            <i class="fas fa-eye"></i>
+                            <span>Смотреть альбом</span>
+                        </div>
+                    </div>
+                    <div class="album-badge">2025</div>
+                </div>
+                <div class="album-info">
+                    <h3 class="album-title">MSRV Барсогория 8</h3>
+                    <div class="album-meta">
+                        <span class="album-photos-count">
+                            <i class="fas fa-camera"></i> 3 фото
+                        </span>
+                        <span class="album-date">2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Альбом 7: Обитаемый остров 2024 -->
+            <div class="album-card" data-year="2024" data-album-id="7">
+                <div class="album-cover">
+                    <img src="img/gallery/Обитаемый остров 2024/1.jpg" alt="Обитаемый остров 2024" class="album-main-photo">
+                    <div class="album-overlay">
+                        <div class="album-overlay-content">
+                            <i class="fas fa-eye"></i>
+                            <span>Смотреть альбом</span>
+                        </div>
+                    </div>
+                    <div class="album-badge">2024</div>
+                </div>
+                <div class="album-info">
+                    <h3 class="album-title">Обитаемый остров 2024 🤙</h3>
+                    <div class="album-meta">
+                        <span class="album-photos-count">
+                            <i class="fas fa-camera"></i> 6 фото
+                        </span>
+                        <span class="album-date">2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Альбом 8: Закрытие 2024 -->
+            <div class="album-card" data-year="2024" data-album-id="8">
+                <div class="album-cover">
+                    <img src="img/gallery/Закрытие 2024/01.jpg" 
+                         alt="Закрытие 2024" class="album-main-photo" referrerpolicy="no-referrer">
+                    <div class="album-overlay">
+                        <div class="album-overlay-content">
+                            <i class="fas fa-eye"></i>
+                            <span>Смотреть альбом</span>
+                        </div>
+                    </div>
+                    <div class="album-badge">2024</div>
+                </div>
+                <div class="album-info">
+                    <h3 class="album-title">Закрытие сезона 2024</h3>
+                    <div class="album-meta">
+                        <span class="album-photos-count">
+                            <i class="fas fa-camera"></i> 11 фото
+                        </span>
+                        <span class="album-date">21 октября 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Альбом 9: Закрытие сезона 2023 -->
+            <div class="album-card" data-year="2023" data-album-id="9">
+                <div class="album-cover">
+                    <img src="img/gallery/Закрытие сезона 2023/01.jpg" alt="Закрытие сезона 2023" class="album-main-photo">
+                    <div class="album-overlay">
+                        <div class="album-overlay-content">
+                            <i class="fas fa-eye"></i>
+                            <span>Смотреть альбом</span>
+                        </div>
+                    </div>
+                    <div class="album-badge">2023</div>
+                </div>
+                <div class="album-info">
+                    <h3 class="album-title">Закрытие сезона 2023</h3>
+                    <div class="album-meta">
+                        <span class="album-photos-count">
+                            <i class="fas fa-camera"></i> 12 фото
+                        </span>
+                        <span class="album-date">2023</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Альбом 10: Первая тренировка 2026 -->
+            <div class="album-card" data-year="2026" data-album-id="10">
+                <div class="album-cover">
+                    <img src="img/gallery/2026тренеровка/1.jpg" alt="Первая тренировка 2026" class="album-main-photo">
+                    <div class="album-overlay">
+                        <div class="album-overlay-content">
+                            <i class="fas fa-eye"></i>
+                            <span>Смотреть альбом</span>
+                        </div>
+                    </div>
+                    <div class="album-badge">2026</div>
+                </div>
+                <div class="album-info">
+                    <h3 class="album-title">Первая тренировка 2026</h3>
+                    <div class="album-meta">
+                        <span class="album-photos-count">
+                            <i class="fas fa-camera"></i> 1 фото
+                        </span>
+                        <span class="album-date">2026</span>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-        <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
     </div>
+</section>
 
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии">
-        <button class="lightbox-close" aria-label="Закрыть">
+<!-- Модальное окно альбома -->
+<div id="albumModal" class="album-modal">
+    <div class="album-modal-content">
+        <div class="album-modal-header">
+            <button class="album-modal-close" aria-label="Закрыть">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 id="modalAlbumTitle" class="album-modal-title"></h3>
+        </div>
+        <div id="modalAlbumPhotos" class="album-modal-photos">
+            <!-- Фотографии будут добавлены через JS -->
+        </div>
+    </div>
+</div>
+
+<!-- Lightbox для просмотра фото -->
+<div id="lightboxVk" class="lightbox-vk">
+    <button class="lightbox-vk-close" aria-label="Закрыть">
         <i class="fas fa-times"></i>
     </button>
-        <button class="lightbox-prev" aria-label="Предыдущее фото">
+    <button class="lightbox-vk-nav lightbox-vk-prev" aria-label="Предыдущее">
         <i class="fas fa-chevron-left"></i>
     </button>
-        <button class="lightbox-next" aria-label="Следующее фото">
+    <button class="lightbox-vk-nav lightbox-vk-next" aria-label="Следующее">
         <i class="fas fa-chevron-right"></i>
     </button>
-        <div class="lightbox-content">
-            <img src="" alt="" class="lightbox-image" id="lightboxImage">
-            <div class="lightbox-caption" id="lightboxCaption">
-                <h3></h3>
-                <p></p>
-            </div>
+    <div class="lightbox-vk-content">
+        <img id="lightboxVkImage" src="" alt="">
+        <div class="lightbox-vk-info">
+            <span id="lightboxVkCounter"></span>
+            <span id="lightboxVkCaption"></span>
         </div>
-        <div class="lightbox-counter" id="lightboxCounter"></div>
     </div>
+</div>
 
 
     <footer>
