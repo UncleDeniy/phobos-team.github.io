@@ -4729,3 +4729,38 @@ body {
     opacity: 0;
     pointer-events: none;
 }
+/* ============================================================
+FIX: стрелки лайтбокса — без кругов, просто жирные стрелки
+============================================================ */
+.lightbox-vk-nav {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: #ffffff;
+    width: 64px;
+    height: 96px;
+    font-size: 2.6rem;
+    -webkit-text-stroke: 1.5px currentColor;              /* «жирность» стрелки */
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);          /* читаемость на любом фото */
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.7));
+    opacity: 0.85;
+    transition: color 0.3s, opacity 0.3s, transform 0.3s;
+}
+.lightbox-vk-nav:hover,
+.lightbox-vk-nav:active {
+    background: transparent;
+    color: var(--accent-color);
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    .lightbox-vk-nav {
+        width: 48px;
+        height: 80px;
+        font-size: 2rem;
+        -webkit-text-stroke: 1.2px currentColor;
+    }
+    .lightbox-vk-prev { left: 8px; }
+    .lightbox-vk-next { right: 8px; }
+}
