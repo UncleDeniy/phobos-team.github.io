@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://uncledeni.github.io/phobos-team.github.io/sitemap.xml
