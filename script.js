@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ГАЛЕРЕЯ
     // ============================================
 
+
     const albumsData = {
         1: {
             title: "Барсогория 9",
@@ -254,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
     };
-
+    
     let currentLightboxPhotos = [];
     let currentLightboxIndex = 0;
 
